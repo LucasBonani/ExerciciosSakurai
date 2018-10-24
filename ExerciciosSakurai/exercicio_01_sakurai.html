@@ -4,24 +4,37 @@
         <title>Exercícios Sakurai</title>
     </head>
     <body>
+        <script type="text/javascript" src="C:\Users\Lucas\git\ExerciciosSakurai\ExerciciosSakurai\script.js"></script>
         <h3>Nível 1: Entrada, Processamento e Saída</h3>
-        <h4>Questão:<br/> 1) Faça um programa para calcular o estoque médio de uma peça, sendo que:<br/>
-        ESTOQUE MÉDIO = (QUANTIDADE_MÍNIMA + QUANTIDADE_MÁXIMA) / 2.</h4>            
-        Qual a quantidade mínima do produto no estoque?<br/>
-        <input name="minima" id="minima"/><br/>
-        Qual a quantidade máxima do produto no estoque?<br/>
-        <input name="maxima" id="maxima"/><br/>
+        <h4>
+            Questão:<br/> 1) Faça um programa para calcular o estoque médio de uma peça, sendo que:<br/>
+            ESTOQUE MÉDIO = (QUANTIDADE_MÍNIMA + QUANTIDADE_MÁXIMA) / 2.
+        </h4>            
+        Qual a quantidade mínima do produto no estoque?<br/><input name="minima" id="minima"/><br/>
+        Qual a quantidade máxima do produto no estoque?<br/><input name="maxima" id="maxima"/><br/>
         <br/><input type="button" onclick="clicar()" value="Calcular" /><br/>
-        <br/>O resultado do cálculo é:<br/> 
-        <input name="medio" id="medio"/><br />
-        <h4>Questão:<br/>2) Faça um programa que:<br/>- Leia a cotação do dólar<br/>- Leia um valor em dólares<br/>
-            - Converta esse valor para Real<br/>- Mostre o resultado</h4>
-        Dólar:<input name="dolar" id="dolar" placeholder="US$"/> vale Real:<input name="real" id="real"/><br/>
-        <h4>Questão:<br/>3) Faça um programa para pagamento de comissão de vendedores de peças, levando-se em consideração que sua
-comissão será de 5% do total da venda e que você tem os seguintes dados:<br/>- Identificação do vendedor<br/>
-- Código da peça
-- Preço unitário da peça
-- Quantidade vendida
+        <br/>O resultado do cálculo é:<br/><input name="medio" id="medio"/><br />
+        <h4>
+            Questão:<br/>2) Faça um programa que:<br/>- Leia a cotação do dólar<br/>- Leia um valor em dólares<br/>
+            - Converta esse valor para Real<br/>- Mostre o resultado
+        </h4>
+        Insira a cotação do Dólar:<br/><input name="cotacaoDolar" id="cotacaoDolar" placeholder="US$ 3.71"/><br/>
+        <br/>Insira os valores em dolares a serem convertidos:<br/><input name="dolar" id="dolar" placeholder="US$ 300,00"/><br/>
+        <br/><input type="button" onclick="conversor()" value="Calcular Conversão" /><br/>
+        <br/>O resultado da conversão em Reais é:<br/> 
+        <input name="convertidoReal" id="convertidoReal"/><br />
+        <h4>
+            Questão:<br/>3) Faça um programa para pagamento de comissão de vendedores de peças, levando-se em consideração que sua
+            comissão será de 5% do total da venda e que você tem os seguintes dados:<br/>- Identificação do vendedor<br/>- Código da peça<br/>
+            - Preço unitário da peça<br/>- Quantidade vendida            
+        </h4>
+        Insira o nome do vendedor:<br/><input name="idVendedor" id="idVendedor"><br/>
+        Insira o código da peça:<br/><input name="codPeca" id="codPeca"><br/> 
+        Insira o valor unitário de cada peça:<br/><input name="valorUnitario" id="valorUnitario"><br/>
+        Insira a quantidade total de peças vendidas:<br/><input name="qtdVenda" id="qtdVenda"><br/>
+        <br/><input type="button" onclick="caculaComissao()" value="Calcular Comissão" /><br/>
+        <br/><textarea name="comissao" id="comissao" maxlength="100"></textarea><br/>
+
 4) Ler quatro valores numéricos inteiros e apresentar o resultado dois a dois da adição e multiplicação entre os
 valores lidos, baseando-se na utilização do conceito de propriedade distributiva. Dica: se forem lidas as variáveis
 A, B, C e D, devem ser somados e multiplicados os valores de A com B, A com C e A com D; depois B com C, B
