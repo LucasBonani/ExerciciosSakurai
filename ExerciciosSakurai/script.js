@@ -3,7 +3,7 @@
     function getId(id){    
         return document.getElementById(id)    
     }   
-    function getId2(id){    
+    function getIdValue(id){    
         return document.getElementById(id).value   
     }   
     //função para transformar em valor reservado no input do html e transformar em float
@@ -26,15 +26,16 @@
 /*----------------------FIM DO SCRIPT QUESTÃO 2---------------------------*/
 /*----------------------INÍCIO DO SCRIPT QUESTÃO 3---------------------------*/
     //função para escrever texto na tela para o usuário visualizar
-    function escreve(texto){
-        document.write(texto)
-    }  
+    
+    function addMenssagem(id , texto) {
+        var mensagem = getId(id)
+        mensagem.textContent = texto
+    }
+
     //função para cálculo de comissão por peça vendida
     function caculaComissao(){
         var porcentagemComissao = 0.05
         var comissao = (getValor('valorUnitario') * getValor('qtdVenda')) * porcentagemComissao
-        getId('comissao').value = comissao
-        escreve( "O " + getId2('idVendedor') + " receberá R$ " + comissao + " de comissão, por ter vendido " + getValor('qtdVenda') 
-         + " peças do código: " + getValor('codPeca'))        
+        addMenssagem('comissao' , "O " + getIdValue('idVendedor') + " receberá R$ " + comissao + " de comissão, por ter vendido " + getValor('qtdVenda') + " peças do código: " + getValor('codPeca'))     
     }
 /*--------------------FIM DO SCRIPT QUESTÃO 3--------------------------*/
